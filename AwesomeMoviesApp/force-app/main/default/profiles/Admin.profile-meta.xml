@@ -13,11 +13,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Actor__c.Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Actor__c.Number_of_movies__c</field>
         <readable>true</readable>
     </fieldPermissions>

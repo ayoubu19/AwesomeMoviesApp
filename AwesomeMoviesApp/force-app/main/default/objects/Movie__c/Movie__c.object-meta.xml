@@ -149,14 +149,14 @@
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <gender>Masculine</gender>
     <label>Movie</label>
     <nameField>
-        <label>Nom de Movie</label>
+        <label>Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Movies</pluralLabel>

@@ -156,8 +156,9 @@
     <gender>Feminine</gender>
     <label>MovieActor</label>
     <nameField>
-        <label>MovieActor</label>
-        <type>Text</type>
+        <displayFormat>{0000}</displayFormat>
+        <label>MovieActor-ID</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>MovieActors</pluralLabel>
     <searchLayouts></searchLayouts>
