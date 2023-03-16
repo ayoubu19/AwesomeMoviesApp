@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <label>Actor</label>
     <referenceTo>Actor__c</referenceTo>
-    <relationshipLabel>MovieActors</relationshipLabel>
+    <relationshipLabel>Movies</relationshipLabel>
     <relationshipName>MovieActors</relationshipName>
     <relationshipOrder>1</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
