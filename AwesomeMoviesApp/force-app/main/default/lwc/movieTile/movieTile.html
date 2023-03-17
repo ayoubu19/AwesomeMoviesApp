@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+         <lightning-button-icon icon-name="action:preview"  size="x-small"  alternative-text="View More" class="slds-m-left_xx-small" slot="actions"></lightning-button-icon>
+        <div class="slds-card__body slds-card__body_inner">
+            <img src={movie.Poster__c} alt="movie picture" class="movie slds-align_absolute-center" />
+        </div>
+        <div slot="footer">
+            <p class="slds-align_absolute-center">{movie.Name}</p>
+            <p class="slds-align_absolute-center">{movie.Category__c}</p>
+            <p class="slds-align_absolute-center">{movie.Release_date__c}</p>
+        </div>        
+    </lightning-card>
+</template>
