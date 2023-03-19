@@ -1,0 +1,64 @@
+<template>
+    <lightning-card title="Movie Preview" >
+        <template lwc:if={movie}>
+            <div>
+            
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <img src={movie.Poster__c} alt="movie picture" class="movie slds-align_absolute-center" />
+            </div>
+            <div class="details">
+                <p>
+                    <span>
+                       Name:
+                    </span>
+                    <span class="data">
+                        {movie.Name}
+                    </span>
+                </p>
+                <p >
+                    <span>
+                        IsRealeased:
+                    </span>
+                    <span class="data">
+                        {movie.IsReleased__c}
+                    </span>
+                    
+                </p>
+                <p>
+                    <span>
+                        Rating:
+                    </span>
+                    <span class="data">
+                        <c-star-rating stars = {stars}></c-star-rating>
+                    </span>
+                    
+                </p>
+                <p>
+                    <span>
+                        Categorie:
+                    </span>
+                    <span class="data">
+                        {movie.Category__c}
+                    </span>
+                </p>
+                <p >
+                    <span>
+                        Description:
+                     </span>
+                     <span class="data">
+                        {movie.Description__c}
+                     </span>
+                    
+                </p>
+            </div>     
+            <div slot="footer">
+                <lightning-button variant="brand-outline" label="update" title="update" icon-name="utility:edit" class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="destructive-text" label="Delete" title="Delete" icon-name="utility:delete" class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </template>
+        <template lwc:else>
+            <p style="margin-left: 10px;">pleas select a movie to preview</p>
+        </template>
+    </lightning-card>
+</template>

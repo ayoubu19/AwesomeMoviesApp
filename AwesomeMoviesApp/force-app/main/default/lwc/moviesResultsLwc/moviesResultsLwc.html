@@ -9,7 +9,7 @@
                     <template lwc:if={hasResults}>
                         <div class="slds-grid slds-wrap">
                                 <template for:each={movies.data} for:item="movie">
-                                    <c-movie-tile key={movie.Id} movie={movie}>
+                                    <c-movie-tile key={movie.Id} movie={movie} onselected={handleMovieSelected}>
                                     </c-movie-tile>
                                 </template>
                         </div>

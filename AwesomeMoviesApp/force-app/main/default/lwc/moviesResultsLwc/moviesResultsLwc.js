@@ -1,5 +1,7 @@
 import { LightningElement, wire } from 'lwc';
 import searchMovies from '@salesforce/apex/MovieController.searchMovies';
+import { publish,MessageContext } from 'lightning/messageService';
+import movieSelected from '@salesforce/messageChannel/MovieSelected__c';
 
 export default class MoviesResultsLwc extends LightningElement {
     searchTerm = '';     
@@ -7,6 +9,10 @@ export default class MoviesResultsLwc extends LightningElement {
     // Load the list of available movies.
     @wire(searchMovies, { searchTerm: '$searchTerm' })
     movies;
+
+	//load Context for lightning messaging service
+	@wire(MessageContext)
+    messageContext;
 
     handleSearchTermChange(event) {
         console.log(this.movies);
@@ -25,4 +31,10 @@ export default class MoviesResultsLwc extends LightningElement {
 		return (this.movies.data.length > 0);
 	}
 
+	//Publish ProductSelected message
+    handleMovieSelected(event) {  
+        publish(this.messageContext, movieSelected, {
+            movie: event.detail
+        }); 
+    }
 }
