@@ -2,6 +2,8 @@ import { LightningElement, wire } from 'lwc';
 import searchMovies from '@salesforce/apex/MovieController.searchMovies';
 import { publish,MessageContext } from 'lightning/messageService';
 import movieSelected from '@salesforce/messageChannel/MovieSelected__c';
+import CreateMovieModal from 'c/createMovieModal';
+import { refreshApex } from '@salesforce/apex';
 
 export default class MoviesResultsLwc extends LightningElement {
     searchTerm = '';     
@@ -31,10 +33,20 @@ export default class MoviesResultsLwc extends LightningElement {
 		return (this.movies.data.length > 0);
 	}
 
-	//Publish ProductSelected message
     handleMovieSelected(event) {  
         publish(this.messageContext, movieSelected, {
             movie: event.detail
         }); 
+    }
+
+    async handleCreateMovieClick(event){
+        const result = await CreateMovieModal.open(
+            {
+            size: 'medium',
+            description: 'Accessible description of modal\'s purpose',
+            }
+        )
+        refreshApex(this.movies);
+        //console.log(JSON.parse(JSON.stringify(result)));
     }
 }
