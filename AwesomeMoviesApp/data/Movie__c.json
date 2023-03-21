@@ -1,0 +1,64 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Movie__c",
+                "referenceId": "Movie__cRef1"
+            },
+            "Name": "Avatar",
+            "Category__c": "Adventure",
+            "Description__c": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+            "Release_date__c": "2023-03-07",
+            "FemaleActorsPercentage__c": 0,
+            "MaleActorsPercentage__c": 0,
+            "IsReleased__c": true,
+            "Rating__c": 5,
+            "Poster__c": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71Lvqoov42L.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Movie__c",
+                "referenceId": "Movie__cRef2"
+            },
+            "Name": "The Wolf of Wall Street",
+            "Category__c": "Drama",
+            "Description__c": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+            "Release_date__c": "2023-03-08",
+            "FemaleActorsPercentage__c": 0,
+            "MaleActorsPercentage__c": 0,
+            "IsReleased__c": true,
+            "Rating__c": 4,
+            "Poster__c": "https://www.themoviedb.org/t/p/original/3510HNgfSUegvMpy09sMfwFtvNM.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Movie__c",
+                "referenceId": "Movie__cRef3"
+            },
+            "Name": "the Avengers",
+            "Category__c": "Action",
+            "Description__c": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+            "Release_date__c": "2023-03-01",
+            "FemaleActorsPercentage__c": 0,
+            "MaleActorsPercentage__c": 0,
+            "IsReleased__c": true,
+            "Rating__c": 4,
+            "Poster__c": "https://static.displate.com/857x1200/displate/2021-01-28/50c288197a62a2386ee9ee41f315f352_982fad6a978f26b986ed8f3f733dd843.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Movie__c",
+                "referenceId": "Movie__cRef4"
+            },
+            "Name": "Interstellar",
+            "Category__c": "Adventure",
+            "Description__c": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+            "Release_date__c": "2023-03-14",
+            "FemaleActorsPercentage__c": 0,
+            "MaleActorsPercentage__c": 0,
+            "IsReleased__c": true,
+            "Rating__c": 5,
+            "Poster__c": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg"
+        }
+    ]
+}

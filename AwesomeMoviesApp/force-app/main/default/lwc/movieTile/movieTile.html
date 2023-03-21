@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+         <lightning-button-icon icon-name="action:preview"  size="x-small"  alternative-text="View More" class="slds-m-left_xx-small" slot="actions" onclick={handleClick}></lightning-button-icon>
+        <div class="slds-card__body slds-card__body_inner">
+            <template lwc:if={movie.Poster__c} >
+                <img src={movie.Poster__c} alt="movie picture" class="movie slds-align_absolute-center" />
+            </template>
+            <template lwc:else >
+                <img src= "https://y.yarn.co/80a4143a-b5df-4fef-80c7-1faf48cf8ad0_text.gif" alt="movie picture" class="movie slds-align_absolute-center" />
+            </template>
+        </div>
+        <div slot="footer">
+            <p class="slds-align_absolute-center" style="font-weight: bold;">{movie.Name}</p>
+            <p class="slds-align_absolute-center">{movie.Category__c}</p>
+            <p class="slds-align_absolute-center">{movie.Release_date__c}</p>
+        </div>        
+    </lightning-card>
+</template>

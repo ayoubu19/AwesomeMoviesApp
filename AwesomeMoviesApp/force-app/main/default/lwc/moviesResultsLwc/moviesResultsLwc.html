@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Movies" icon-name="custom:custom99">
+        <lightning-button label="New Movie" slot="actions" onclick={handleCreateMovieClick}></lightning-button>
+        <div class="slds-card__body slds-card__body_inner">
+            <lightning-input type="search" onchange={handleSearchTermChange} variant="label-hidden"
+                class="slds-var-m-bottom_small" label="Search" placeholder="Search for movies" value={searchTerm}>
+            </lightning-input>
+            <template lwc:if={movies.data}>
+                    <template lwc:if={hasResults}>
+                        <div class="slds-grid slds-wrap slds-border_top slds-border_left">
+                                <template for:each={movies.data} for:item="movie">
+                                    <c-movie-tile key={movie.Id} movie={movie} onselected={handleMovieSelected}>
+                                    </c-movie-tile>
+                                </template>
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <p>There are no movies matching your current selection</p>
+                    </template>
+                </template>
+                <template lwc:if={movies.error}>
+                    <p>An error was encountered trying to get movies data</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
+

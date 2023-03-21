@@ -1,0 +1,31 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Actor__c",
+                "referenceId": "Actor__cRef1"
+            },
+            "Name": "Sam Worthington",
+            "Gender__c": "Male",
+            "Number_of_movies__c": 0
+        },
+        {
+            "attributes": {
+                "type": "Actor__c",
+                "referenceId": "Actor__cRef2"
+            },
+            "Name": "Leonardo DiCaprio",
+            "Gender__c": "Male",
+            "Number_of_movies__c": 0
+        },
+        {
+            "attributes": {
+                "type": "Actor__c",
+                "referenceId": "Actor__cRef3"
+            },
+            "Name": "Chris Hemsworth",
+            "Gender__c": "Male",
+            "Number_of_movies__c": 0
+        }
+    ]
+}
