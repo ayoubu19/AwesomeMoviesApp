@@ -1,9 +1,0 @@
-.active-star {
-    --sds-c-icon-color-foreground-default: rgb(255, 221, 0);
-    --sds-c-icon-color-background: rgb(255, 255, 255);
-}
-
-.inactive-star {
-    --sds-c-icon-color-foreground-default: rgb(130, 130, 128);
-    --sds-c-icon-color-background: rgb(255, 255, 255);
-}
