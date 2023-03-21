@@ -1,0 +1,20 @@
+<template>
+    <lightning-modal-header label="Create Movie" ></lightning-modal-header>
+    <lightning-modal-body> 
+        <lightning-input type="text" label="Name" value={movie.name} onchange={handleNameChange} placeholder="ex: the Matrix..." required></lightning-input>
+        <lightning-combobox label="Category" options={categories} value={movie.category} onchange={handleCategoryChange} required></lightning-combobox>
+        <lightning-input type="url" label="Poster URL" value={movie.poster} name="poster" placeholder="drop the poster url here" onchange={handlePosterChange}></lightning-input>
+        <lightning-textarea name="description" value={movie.description} label="Description" placeholder="write some description..." onchange={handleDesciptionChange}></lightning-textarea>
+        <lightning-input type="date" name="realeas-date" value={movie.releaseDate} placeholder="02/03/1996" label="Release Date" onchange={handleReleaseDateChange} required></lightning-input>
+        <lightning-combobox label="Rating" options={ratings} value={movie.rating} onchange={handleRatingChange} ></lightning-combobox>
+        <lightning-combobox label="Actors" options={actorsOptions} value={selectedActor} onchange={handleActorChange} placeholder="select actors progressively" class="actor-combo"></lightning-combobox>
+        <template  for:each={selectedActors} for:item="selectedActor" >
+            <lightning-pill key = {selectedActor} label={selectedActor} name ={selectedActor} onremove={handlePillRemove} class="my-pill">
+            </lightning-pill>
+        </template>
+        <div class="slds-m-top_medium slds-align_absolute-center">
+            <lightning-button variant="brand" label="Create"  onclick={handleCreateMovie}></lightning-button>
+            <lightning-button variant="brand-outline" label="Cancel"  onclick={handleCancel} class="slds-m-left_medium"></lightning-button>
+        </div>
+    </lightning-modal-body>
+</template>

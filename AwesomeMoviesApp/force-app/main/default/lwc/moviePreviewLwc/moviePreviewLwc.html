@@ -5,7 +5,13 @@
             
             </div>
             <div class="slds-card__body slds-card__body_inner">
-                <img src={movie.Poster__c} alt="movie picture" class="movie slds-align_absolute-center" />
+                <template lwc:if={movie.Poster__c} >
+                    <img src={movie.Poster__c} alt="movie picture" class="movie slds-align_absolute-center" />
+                </template>
+                <template lwc:else >
+                    <img src= "https://y.yarn.co/80a4143a-b5df-4fef-80c7-1faf48cf8ad0_text.gif" alt="movie picture" class="movie slds-align_absolute-center" />
+                </template>
+                
             </div>
             <div class="details">
                 <p>
@@ -47,7 +53,12 @@
                         Description:
                      </span>
                      <span class="data">
-                        {movie.Description__c}
+                        <template lwc:if={movie.Description__c}>
+                            {movie.Description__c}
+                        </template>
+                        <template lwc:else>
+                            No description provided
+                        </template>
                      </span>
                     
                 </p>
