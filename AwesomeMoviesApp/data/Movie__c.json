@@ -59,6 +59,36 @@
             "IsReleased__c": true,
             "Rating__c": 5,
             "Poster__c": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Movie__c",
+                "referenceId": "Movie__cRef5"
+            },
+            "Name": "titanic",
+            "Category__c": "Drama",
+            "Description__c": "Seventeen-year-old Rose hails from an aristocratic family and is set to be married. ",
+            "Release_date__c": "2023-03-14",
+            "FemaleActorsPercentage__c": 0,
+            "MaleActorsPercentage__c": 0,
+            "IsReleased__c": true,
+            "Rating__c": 5,
+            "Poster__c": "https://c8.alamy.com/comp/PXNB7R/titanic-original-movie-poster-PXNB7R.jpg"
+        },
+        {
+            "attributes": {
+                "type": "Movie__c",
+                "referenceId": "Movie__cRef6"
+            },
+            "Name": "One Piece Red",
+            "Category__c": "Adventure",
+            "Description__c": "a Japanese manga series written and illustrated by Eiichiro Oda. ",
+            "Release_date__c": "2023-03-14",
+            "FemaleActorsPercentage__c": 0,
+            "MaleActorsPercentage__c": 0,
+            "IsReleased__c": true,
+            "Rating__c": 5,
+            "Poster__c": "https://static.wikia.nocookie.net/onepiece/images/3/34/One_Piece_Film_Red_Poster_Visual.png/revision/latest?cb=20220608181914"
         }
     ]
 }
