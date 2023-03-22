@@ -7,9 +7,9 @@
         <lightning-textarea name="description" value={movie.description} label="Description" placeholder="write some description..." onchange={handleDesciptionChange}></lightning-textarea>
         <lightning-input type="date" name="realeas-date" value={movie.releaseDate} placeholder="02/03/1996" label="Release Date" onchange={handleReleaseDateChange} required></lightning-input>
         <lightning-combobox label="Rating" options={ratings} value={movie.rating} onchange={handleRatingChange} ></lightning-combobox>
-        <lightning-combobox label="Actors" options={actorsOptions} value={selectedActor} onchange={handleActorChange} placeholder="select actors progressively" class="actor-combo"></lightning-combobox>
+        <lightning-combobox label="Actors" options={actorsOptions} value={selectedActor} onchange={handleActorChange} placeholder="select actors progressively" class="slds-m-bottom_x-small"></lightning-combobox>
         <template  for:each={selectedActors} for:item="selectedActor" >
-            <lightning-pill key = {selectedActor} label={selectedActor} name ={selectedActor} onremove={handlePillRemove} class="my-pill">
+            <lightning-pill key = {selectedActor} label={selectedActor} name ={selectedActor} onremove={handlePillRemove} class="slds-m-right_x-small">
             </lightning-pill>
         </template>
         <div class="slds-m-top_medium slds-align_absolute-center">

@@ -24,10 +24,15 @@
                 </p>
                 <p >
                     <span>
-                        IsRealeased:
+                         Realease:
                     </span>
                     <span class="data">
-                        {movie.IsReleased__c}
+                        <template lwc:if={movie.IsReleased__c}>
+                            Available To Watch
+                        </template>
+                        <template lwc:else>
+                            Upcoming ...
+                        </template>
                     </span>
                     
                 </p>
@@ -36,7 +41,7 @@
                         Rating:
                     </span>
                     <span class="data">
-                        <c-star-rating stars = {stars}></c-star-rating>
+                        <c-star-rating rating = {movie.Rating__c}></c-star-rating>
                     </span>
                     
                 </p>
@@ -57,7 +62,7 @@
                             {movie.Description__c}
                         </template>
                         <template lwc:else>
-                            No description provided
+                            No Description Available
                         </template>
                      </span>
                     

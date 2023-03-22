@@ -6,6 +6,6 @@ c-movie-tile {
 
 .slds-grid {
     justify-content: center;
-    height: 67vh;
+    height: 66vh;
     overflow: scroll;
 }
