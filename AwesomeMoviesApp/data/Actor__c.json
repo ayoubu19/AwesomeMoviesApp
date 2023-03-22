@@ -26,6 +26,33 @@
             "Name": "Chris Hemsworth",
             "Gender__c": "Male",
             "Number_of_movies__c": 0
+        },
+        {
+            "attributes": {
+                "type": "Actor__c",
+                "referenceId": "Actor__cRef4"
+            },
+            "Name": "Jennifer Lawrence",
+            "Gender__c": "Female",
+            "Number_of_movies__c": 0
+        },
+        {
+            "attributes": {
+                "type": "Actor__c",
+                "referenceId": "Actor__cRef5"
+            },
+            "Name": "Meryl Streep",
+            "Gender__c": "Female",
+            "Number_of_movies__c": 0
+        },
+        {
+            "attributes": {
+                "type": "Actor__c",
+                "referenceId": "Actor__cRef6"
+            },
+            "Name": "Scarlett Johansson",
+            "Gender__c": "Female",
+            "Number_of_movies__c": 0
         }
     ]
 }

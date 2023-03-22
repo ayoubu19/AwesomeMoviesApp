@@ -4,6 +4,7 @@
     <columns>NAME</columns>
     <columns>FemaleActorsPercentage__c</columns>
     <columns>MaleActorsPercentage__c</columns>
+    <columns>IsReleased__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>
