@@ -13,6 +13,9 @@
             <p class="slds-align_absolute-center" style="font-weight: bold;">{movie.Name}</p>
             <p class="slds-align_absolute-center">{movie.Category__c}</p>
             <p class="slds-align_absolute-center">{movie.Release_date__c}</p>
+            <p class="slds-align_absolute-center">
+                <c-star-rating rating = {movie.Rating__c}></c-star-rating>
+            </p>
         </div>        
     </lightning-card>
 </template>

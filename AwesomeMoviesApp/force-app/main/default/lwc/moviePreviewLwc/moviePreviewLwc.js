@@ -19,8 +19,7 @@ export default class MoviePreviewLwc extends LightningElement {
             movieSelected,
             (message) => {
                 this.handleMoviesSelection(message.movie);
-                this.generateStars(message.movie);
-                console.log(stars);
+                //this.generateStars(message.movie);
             });
     }
 
@@ -29,26 +28,7 @@ export default class MoviePreviewLwc extends LightningElement {
         this.subscription = null;
     }
 
-    generateStars(movie) {
-        this.stars = [];
-        for (let i = 1; i < 6; i++) {
-           
-          const isActive = (i <= movie.Rating__c);
-          let starStyle = this.styleStar(isActive);
-          const star = {
-            id: i,
-            isActive,
-            starStyle
-          }
-          this.stars.push(star);
-        }
-    } 
-    
-    styleStar(isActive) { 
-        return isActive ? 'active-star' : 'inactive-star';
-    }
-
-    handleMoviesSelection(movie) {
+   handleMoviesSelection(movie) {
         this.movie = movie;
     }
 }
