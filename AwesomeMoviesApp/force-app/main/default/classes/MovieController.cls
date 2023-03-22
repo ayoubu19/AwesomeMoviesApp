@@ -1,7 +1,7 @@
 public with sharing class MovieController {
     
     @AuraEnabled(Cacheable=true scope='global')
-    public static Movie__c[] getMovies() {
+    public static List<Movie__c> getMovies() {
         return [
             SELECT id ,Name, Category__c, Description__c, Release_date__c, FemaleActorsPercentage__c,
             MaleActorsPercentage__c, IsReleased__c, Rating__c,Poster__c From Movie__C 
@@ -10,7 +10,7 @@ public with sharing class MovieController {
     }
 
     @AuraEnabled(cacheable=true scope='global')
-    public static Movie__c[] searchMovies(String searchTerm) {
+    public static List<Movie__c> searchMovies(String searchTerm) {
         
         searchTerm = searchTerm.trim();
         if (searchTerm == '') {
