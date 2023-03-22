@@ -4,8 +4,6 @@ import movieSelected from '@salesforce/messageChannel/MovieSelected__c';
 
 export default class MoviePreviewLwc extends LightningElement {
 
-    //todo: refactor star generation with a better way
-    
     subscription = null;
     movie = null;
     stars = [];

@@ -17,13 +17,11 @@ export default class MoviesResultsLwc extends LightningElement {
     messageContext;
 
     handleSearchTermChange(event) {
-        console.log(this.movies);
-        // Debouncing this method: do not update the reactive property as
-		// long as this function is being called within a delay of 300 ms.
+        //rxjs debouce simulaton 
 		// This is to avoid a very large number of Apex method calls.
 		window.clearTimeout(this.delayTimeout);
 		const searchTerm = event.target.value;
-		// eslint-disable-next-line @lwc/lwc/no-async-operation
+
 		this.delayTimeout = setTimeout(() => {
 			this.searchTerm = searchTerm;
 		}, 300);
@@ -43,7 +41,7 @@ export default class MoviesResultsLwc extends LightningElement {
         const result = await CreateMovieModal.open(
             {
             size: 'medium',
-            description: 'Accessible description of modal\'s purpose',
+            description: 'create a new movie modal',
             }
         )
         refreshApex(this.movies);

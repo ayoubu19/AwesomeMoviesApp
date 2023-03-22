@@ -55,7 +55,7 @@ export default class CreateMovieModal extends LightningModal {
             this.selectedActors = [...this.selectedActors, this.selectedActor];
         }
 
-        //todo refactore it outside in a method
+        //todo refactore it outside in a method + use map
         this.actors.forEach(actor => {
             if (actor.name === this.selectedActor) {
                 if (!this.selectedActorIds.includes(actor.id)) {
