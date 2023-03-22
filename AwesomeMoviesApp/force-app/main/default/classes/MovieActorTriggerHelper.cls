@@ -1,8 +1,8 @@
 public with sharing class MovieActorTriggerHelper {
     public static void updateMovieMaleAndFemalePercentage(List<MovieActor__c> newMovieActors){
         // business logic
-        Integer malePourcentage = 0;
-        Integer feMalePourcentage = 0;
+        Decimal malePourcentage = 0;
+        Decimal feMalePourcentage = 0;
         
          for(MovieActor__c movieActor : newMovieActors) {
 
@@ -13,16 +13,28 @@ public with sharing class MovieActorTriggerHelper {
             }else{
                 feMalePourcentage++;
             }
-
+            
             actor.Number_of_movies__c ++;
-            update actor;
+            
+            try {
+                update actor;
+            } catch(Exception e) {
+                System.debug('error while updating actor ' + e);
+            }
+            
         } 
 
         Movie__c movie  = [SELECT MaleActorsPercentage__c, FeMaleActorsPercentage__c FROM Movie__c WHERE Movie__c.Id =: newMovieActors.get(0).Movie__c];
        
-        movie.MaleActorsPercentage__c = (malePourcentage / malePourcentage + feMalePourcentage)*100;
-        movie.FeMaleActorsPercentage__c =(feMalePourcentage / malePourcentage + feMalePourcentage)*100;
+        Decimal  total = malePourcentage + feMalePourcentage;
+        movie.MaleActorsPercentage__c = (malePourcentage / total) * 100;
+        movie.FeMaleActorsPercentage__c = (feMalePourcentage / total) * 100;
+
+        try {
+            update movie;
+        } catch(Exception e) {
+            System.debug('error while updating movie ' + e);
+        }
         
-        update movie;
     }
 }
